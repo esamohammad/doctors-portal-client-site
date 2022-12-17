@@ -20,3 +20,5 @@ const Bannar = () => {
 };
 
 export default Bannar;
+
+//bg cover dite parlam na abar try korbo..
