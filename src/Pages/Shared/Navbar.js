@@ -34,3 +34,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+//navbar done with routers and route and i goto hero section ..
