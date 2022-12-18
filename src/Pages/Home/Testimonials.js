@@ -4,14 +4,14 @@ import quote from './../../icons/quote.svg'
 
 const Testimonials = () => {
     return (
-        <section>
+        <section className='py-32 '>
             <div className='flex justify-between'>
-                <div>
+                <div className='text-left'>
                     <h4 className="text-xl text-primary font-bold"> Testimonials</h4>
-                    <h2 className='text-3xl font-bold'> What Our Patients Say</h2>
+                    <h2 className='text-3xl font-bold py-4'> What Our Patients Say</h2>
                 </div>
                 <div>
-                    <img src={quote} alt='' />
+                    <img src={quote} className='w-24 lg:w-48' alt='' />
                 </div>
             </div>
 
