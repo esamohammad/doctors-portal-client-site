@@ -1,11 +1,22 @@
 import React from 'react';
+import quote from './../../icons/quote.svg'
+
 
 const Testimonials = () => {
     return (
-        <div>
-            <h4 className='text-left mt-24 text-2xl mb-4 text-primary font-bold'>Testimonial</h4>
-            <h2 className='text-left mt-4 text-3xl mb-4  font-bold'>What Our Patients Says</h2>
-        </div>
+        <section>
+            <div className='flex justify-between'>
+                <div>
+                    <h4 className="text-xl text-primary font-bold"> Testimonials</h4>
+                    <h2 className='text-3xl font-bold'> What Our Patients Say</h2>
+                </div>
+                <div>
+                    <img src={quote} alt='' />
+                </div>
+            </div>
+
+            <div></div>
+        </section>
     );
 };
 
