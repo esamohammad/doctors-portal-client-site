@@ -1,14 +1,56 @@
 import React from 'react';
-
+import quote from './../../icons/quote.svg'
+import people1 from './../../assets/people1.png'
+import people2 from './../../assets/people2.png'
+import people3 from './../../assets/people3.png'
+import Review from './Review';
 const Testimonial = () => {
-    return (
-        <div class="card w-96 bg-base-100 shadow-2xl">
-            <div class="card-body">
 
-                <p className='text-justify'>If a dog chews shoes whose shoes does he choose?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto mollitia eos.</p>
+    const reviews = [
+        {
+            _id: 1,
+            name: 'Winson Herry',
+            img: people1,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 2,
+            name: 'Winson Herry',
+            img: people2,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 3,
+            name: 'Winson Herry',
+            img: people3,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+    ]
+
+    return (
+        <section className='my-16'>
+            <div className='flex justify-between'>
+                <div className='text-left'>
+                    <h4 className="text-2xl text-primary font-bold">Testimonial</h4>
+                    <h2 className="text-4xl my-4">What Our Patients Says</h2>
+                </div>
+                <figure>
+                    <img className='w-24 lg:w-48' src={quote} alt="" />
+                </figure>
             </div>
-            <figure><img className='w-32  rounded-full' src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-        </div>
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-justify'>
+                {
+                    reviews.map(review => <Review
+                        key={review._id}
+                        review={review}
+                    >
+                    </Review>)
+                }
+            </div>
+        </section>
     );
 };
 
