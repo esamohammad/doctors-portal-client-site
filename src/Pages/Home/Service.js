@@ -16,3 +16,5 @@ const Service = ({ img, name }) => {
 };
 
 export default Service;
+
+//Our services part is done Alhamdulillah.
