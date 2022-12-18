@@ -3,7 +3,7 @@ import Chair from './../../assets/chair.png'
 
 const Bannar = () => {
     return (
-        <div class="hero min-h-screen py-16">
+        <div class="hero min-h-screen py-14">
             <div class="hero-content flex-col lg:flex-row-reverse px-10">
                 <img src={Chair} class="max-h-80  rounded-lg shadow-2xl" />
 

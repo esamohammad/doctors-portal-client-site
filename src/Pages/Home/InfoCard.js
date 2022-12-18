@@ -7,7 +7,7 @@ const InfoCard = ({ img, cardTitle,bgClass }) => {
                 <img src={img} alt="Album" />
             </figure>
 
-            <div class="card-body text-white py-7 ">
+            <div class="card-body text-white py-10 ">
                 <h3 class="card-title"> {cardTitle} </h3>
                 <p>Click the button to </p>
 
