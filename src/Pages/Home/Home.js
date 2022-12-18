@@ -4,7 +4,7 @@ import Bannar from './Bannar';
 import Info from './Info';
 import Services from './Services';
 import CareUnit from './CareUnit';
-import Appointment from './Appointment';
+import MakeAppointment from './MakeAppointment';
 
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
             <Info></Info>
             <Services></Services>
             <CareUnit></CareUnit>
-            <Appointment></Appointment>
+            <MakeAppointment></MakeAppointment>
         </div>
     );
 };
