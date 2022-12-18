@@ -1,0 +1,21 @@
+import React from 'react';
+import Doctor from './../../assets/doctor.png'
+
+const Appointment = () => {
+    return (
+        <div class="hero min-h-screen  my-14 bg-slate-400">
+            <div class="hero-content flex-col lg:flex-row">
+                <img src={Doctor} class="w-96 " />
+                <div className='text-left px-10'>
+                    <h1 class="text-5xl font-bold">Exceptionnal Dental Care,</h1>
+                    <h1 class="text-5xl font-bold">On Your Terms</h1>
+                    <p class="py-0"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi sit, rem facere fuga saepe inventore deserunt enim repudiandae earum est sequi qui nisi. Maiores maxime earum nam ratione amet qui nesciunt nemo, debitis ex vel quidem accusamus incidunt magni dolore? Optio, ex ut. Culpa ullam consequuntur blanditiis quas deleniti nisi ex unde minima beatae, et incidunt aspernatur fuga architecto modi labore ipsum optio aliquam laudantium iure ab dolorem? Ducimus, provident! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga deleniti quis consequatur excepturi delectus sunt rem eos soluta voluptatibus laborum. </p>
+
+                    <button class="btn btn-primary uppercase text-white font-bold bg-gradient-to-r from-cyan-500 to-blue-500">Learn More</button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Appointment;

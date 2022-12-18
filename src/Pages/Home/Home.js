@@ -4,6 +4,7 @@ import Bannar from './Bannar';
 import Info from './Info';
 import Services from './Services';
 import CareUnit from './CareUnit';
+import Appointment from './Appointment';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Info></Info>
             <Services></Services>
             <CareUnit></CareUnit>
+            <Appointment></Appointment>
         </div>
     );
 };
