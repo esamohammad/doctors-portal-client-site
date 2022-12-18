@@ -9,10 +9,10 @@ const Bannar = () => {
             background: `url (${bg})`
         }} className='flex'>
             <div class="hero min-h-screen py-14">
-                <div class="hero-content flex-col lg:flex-row-reverse px-10">
+                <div class="hero-content flex-col lg:flex-row-reverse ">
                     <img src={Chair} class="max-h-80  rounded-lg shadow-2xl" />
 
-                    <div class="text-left px-10">
+                    <div class="text-left ">
                         <h1 class="text-6xl font-bold ">Your New Smile </h1>
                         <h1 class="text-5xl font-bold ">Starts Here</h1>
                         <p class="py-6 text-left">Provident cupiditate voluptatem et in.Quaerat fugiat ut assumenda excepturi exercitationem quasi.
