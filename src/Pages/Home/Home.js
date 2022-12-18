@@ -1,7 +1,9 @@
 import React from 'react';
 import Bannar from './Bannar';
+
 import Info from './Info';
 import Services from './Services';
+import CareUnit from './CareUnit';
 
 
 const Home = () => {
@@ -10,6 +12,7 @@ const Home = () => {
             <Bannar></Bannar>
             <Info></Info>
             <Services></Services>
+            <CareUnit></CareUnit>
         </div>
     );
 };
