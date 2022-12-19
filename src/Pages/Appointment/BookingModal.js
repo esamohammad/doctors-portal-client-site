@@ -2,12 +2,12 @@ import React from 'react';
 import { format } from 'date-fns';
 
 const BookingModal = ({ date, treatment }) => {
-    const { name, slots } = treatment;
+    const {_id, name, slots } = treatment;
 
     const handleBooking = event => {
         event.preventDefault();
         const slot = event.target.slot.value;
-        console.log(slot);
+        console.log(_id, name, slot);
 
     }
 
