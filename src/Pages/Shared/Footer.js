@@ -3,7 +3,7 @@ import footer from './../../assets/footer.png'
 
 const Footer = () => {
     return (
-        <section className='mt-2'
+        <section className='mt-24'
             style={{
                 background: `url(${footer})`,
                 backgroundSize: 'cover'
