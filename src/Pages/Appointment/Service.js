@@ -12,7 +12,7 @@ const Service = ({ service }) => {
                 <p className='text-xl'>{slots.length} {slots.length > 1 ? 'spaces' : 'space'} available</p>
 
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button disabled={slots.length === 0} className="btn btn-primary">Buy Now</button>
                 </div>
 
             </div>
