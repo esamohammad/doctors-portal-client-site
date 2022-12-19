@@ -14,18 +14,18 @@ const BookingModal = ({ date, treatment }) => {
                     <form className='grid grid-cols-1 gap-4 justify-items-center mt-4'>
                         <input type="text" disabled value={format(date, 'PP')} className="input input-bordered w-full max-w-xs" />
 
-                        <select className="select select-bordered w-full max-w-xs">
+                        <select name="slot" className="select select-bordered w-full max-w-xs">
                             {
                                 slots.map(slot => <option value={slot}>{slot}</option>)
                             }
 
                         </select>
 
-                        <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name="name" placeholder="Your Name" className="input input-bordered w-full max-w-xs" />
 
-                        <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                        <input type="email" name="email" placeholder="Email Address" className="input input-bordered w-full max-w-xs" />
 
-                        <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
 
                         <input type="submit" value="Submit" className="btn btn-primary w-full max-w-xs" />
                     </form>
