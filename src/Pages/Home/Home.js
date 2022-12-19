@@ -8,7 +8,7 @@ import MakeAppointment from './MakeAppointment';
 import Testimonial from './Testimonial';
 import HomeContact from './HomeContact';
 import Footer from './Footer';
-
+import CopyRight from './CopyRight';
 
 const Home = () => {
     return (
@@ -21,6 +21,7 @@ const Home = () => {
             <Testimonial></Testimonial>
             <HomeContact></HomeContact>
             <Footer></Footer>
+            <CopyRight></CopyRight>
         </div>
     );
 };

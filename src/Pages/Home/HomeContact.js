@@ -10,47 +10,47 @@ const HomeContact = () => {
             }}
         >
 
-            <div class="hero my-24 ">
-                <div class="hero-content flex-col ">
-                    <div class=" text-center">
-                        <h1 class="text-3xl font-bold text-primary">Contact Us</h1>
-                        <h1 class="text-4xl font-bold text-white ">Stay connected with Us</h1>
+            <div className="hero my-24 ">
+                <div className="hero-content flex-col ">
+                    <div className=" text-center">
+                        <h1 className="text-3xl font-bold text-primary">Contact Us</h1>
+                        <h1 className="text-4xl font-bold text-white ">Stay connected with Us</h1>
                     </div>
 
-                    <div class="card flex-shrink-0 w-full shadow-2xl bg-base-200">
-                        <div class="card-body">
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Email</span>
+                    <div className="card flex-shrink-0 w-full shadow-2xl bg-base-200">
+                        <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" class="input input-bordered" />
+                                <input type="text" placeholder="email" className="input input-bordered" />
                             </div>
 
 
 
-                            <div class="form-control">
-                                <label class="label">
-                                    <span class="label-text">Password</span>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" class="input input-bordered" />
-                                <label class="label">
-
-                                </label>
-                            </div>
-
-                            <div class=" form-control mt-0">
-                                <label class="label">
-                                    <span class="label-text">Your Message</span>
-                                </label>
-                                <input type="text" placeholder="Please Type Your Message..." class="input input-bordered h-24" />
-                                <label class="label">
+                                <input type="text" placeholder="password" className="input input-bordered" />
+                                <label className="label">
 
                                 </label>
                             </div>
 
+                            <div className=" form-control mt-0">
+                                <label className="label">
+                                    <span className="label-text">Your Message</span>
+                                </label>
+                                <input type="text" placeholder="Please Type Your Message..." className="input input-bordered h-24" />
+                                <label className="label">
 
-                            <div class="form-control mt-6">
-                                <button class="btn btn-primary">Login</button>
+                                </label>
+                            </div>
+
+
+                            <div className="form-control mt-6">
+                                <button className="btn btn-primary">Login</button>
                             </div>
                         </div>
                     </div>
