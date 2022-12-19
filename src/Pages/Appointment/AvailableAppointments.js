@@ -28,9 +28,9 @@ const AvailableAppointments = ({ date }) => {
             </div>
             {/* Parent */}
             {/* //This is all service ar container tai atar upor css hobe, */}
-            
-            
-            {treatment && <BookingModal treatment={treatment}></BookingModal>}
+
+
+            {treatment && <BookingModal date={date} treatment={treatment}></BookingModal>}
             {/* jodi treatment peye thake tahole modal open hobe */}
 
         </div>
