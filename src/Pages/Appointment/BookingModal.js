@@ -1,7 +1,18 @@
 import React from 'react';
 import { format } from 'date-fns';
+
 const BookingModal = ({ date, treatment }) => {
     const { name, slots } = treatment;
+
+    const handleBooking = event => {
+        event.preventDefault();
+        const slot = event.target.slot.value;
+        console.log(slot);
+
+    }
+
+
+
     return (
         <div>
 
@@ -11,7 +22,7 @@ const BookingModal = ({ date, treatment }) => {
                     <label htmlFor="booking-modal" className=" btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="font-bold text-lg text-primary">Booking for : {name}</h3>
 
-                    <form className='grid grid-cols-1 gap-4 justify-items-center mt-4'>
+                    <form onSubmit={handleBooking} className='grid grid-cols-1 gap-4 justify-items-center mt-4'>
                         <input type="text" disabled value={format(date, 'PP')} className="input input-bordered w-full max-w-xs" />
 
                         <select name="slot" className="select select-bordered w-full max-w-xs">
