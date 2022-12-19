@@ -17,3 +17,5 @@ const Appointment = () => {
 };
 
 export default Appointment;
+
+//date ar set date state lift korte hoiche
