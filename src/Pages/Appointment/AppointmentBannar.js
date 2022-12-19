@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
 import bg from './../../assets/bg.png';
 import chair from './../../assets/chair.png';
 import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
-const AppointmentBannar = () => {
-    const [date, setDate] = useState(new Date());
+const AppointmentBannar = ({ date, setDate }) => {
+
     return (
 
         <section className=''

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CopyRight from '../Home/CopyRight';
 import Footer from '../Shared/Footer';
 import AppointmentBannar from './AppointmentBannar';
+import AvailableAppointments from './AvailableAppointments';
 
 const Appointment = () => {
+    const [date, setDate] = useState(new Date());
     return (
         <div>
-            <AppointmentBannar></AppointmentBannar>
+            <AppointmentBannar date={date} setDate={setDate}></AppointmentBannar>
+            <AvailableAppointments></AvailableAppointments>
             <Footer></Footer>
             <CopyRight></CopyRight>
         </div>
