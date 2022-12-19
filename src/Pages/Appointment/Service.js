@@ -14,7 +14,7 @@ const Service = ({ service, setTreatment }) => {
 
                 <div className="card-actions justify-center">
                     <button 
-                    disabled={slots.length === 0} onClick={setTreatment}
+                    disabled={slots.length === 0} onClick={()=>setTreatment(service)}
                     className="btn btn-primary text-white ">Book Appointment</button>
                 </div>
 
