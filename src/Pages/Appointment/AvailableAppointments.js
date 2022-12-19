@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
+import Service from './Service';
 
 const AvailableAppointments = ({ date }) => {
     const [services, setServices] = useState([]);
@@ -15,7 +16,14 @@ const AvailableAppointments = ({ date }) => {
             <p className='text-primary text-3xl '>Available Appointments on {format(date, 'PP')} </p>;
 
             <div>
-
+                { 
+                
+                services.map(service=><Service
+                key = {service._id}
+                service={service}
+                ></Service>)
+                
+                }
             </div>
 
 
