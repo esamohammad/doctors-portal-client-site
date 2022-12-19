@@ -14,6 +14,12 @@ const AvailableAppointments = ({ date }) => {
         <div>
             <p className='text-primary text-3xl '>Available Appointments on {format(date, 'PP')} </p>;
 
+            <div>
+
+            </div>
+
+
+
         </div>
     );
 };
