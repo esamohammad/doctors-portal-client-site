@@ -15,9 +15,10 @@ const BookingModal = ({ date, treatment }) => {
                         <input type="text" disabled value={format(date, 'PP')} className="input input-bordered w-full max-w-xs" />
 
                         <select className="select select-bordered w-full max-w-xs">
-                            <option disabled selected>Who shot first?</option>
-                            <option>Han Solo</option>
-                            <option>Greedo</option>
+                            {
+                                slots.map(slot => <option value={slot}>{slot}</option>)
+                            }
+
                         </select>
 
                         <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
