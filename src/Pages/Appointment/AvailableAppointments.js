@@ -30,7 +30,11 @@ const AvailableAppointments = ({ date }) => {
             {/* //This is all service ar container tai atar upor css hobe, */}
 
 
-            {treatment && <BookingModal date={date} treatment={treatment}></BookingModal>}
+            {treatment && <BookingModal 
+            date={date} 
+            treatment={treatment}
+            setTreatment={setTreatment}
+            ></BookingModal>}
             {/* jodi treatment peye thake tahole modal open hobe */}
 
         </div>
