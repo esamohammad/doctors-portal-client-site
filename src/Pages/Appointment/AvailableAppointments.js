@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
+import BookingModal from './BookingModal';
 import Service from './Service';
 
 const AvailableAppointments = ({ date }) => {
@@ -25,10 +26,10 @@ const AvailableAppointments = ({ date }) => {
                     ></Service>)
                 }
             </div>
-
             {/* Parent */}
             {/* //This is all service ar container tai atar upor css hobe, */}
-
+            {treatment && <BookingModal treatment={treatment}></BookingModal>}
+            {/* jodi treatment peye thake tahole modal open hobe */}
 
         </div>
     );
