@@ -9,7 +9,7 @@ const Appointment = () => {
     return (
         <div>
             <AppointmentBannar date={date} setDate={setDate}></AppointmentBannar>
-            <AvailableAppointments></AvailableAppointments>
+            <AvailableAppointments date={date}></AvailableAppointments>
             <Footer></Footer>
             <CopyRight></CopyRight>
         </div>

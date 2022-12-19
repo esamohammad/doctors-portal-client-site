@@ -1,6 +1,5 @@
 import bg from './../../assets/bg.png';
 import chair from './../../assets/chair.png';
-import { format } from 'date-fns';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
@@ -13,7 +12,7 @@ const AppointmentBannar = ({ date, setDate }) => {
                 background: `url(${bg})`,
                 backgroundSize: 'cover'
             }}>
-            <p className='text-blue-900 text-3xl '>You have Selected: {format(date, 'PP')}</p>;
+            <p className='text-blue-900 text-3xl '>You have Selected: </p>;
             <div className="hero pt-1 ">
 
                 <div className="hero-content flex-col lg:flex-row-reverse ">

@@ -1,11 +1,14 @@
+import { format } from 'date-fns';
 import React from 'react';
 
-const AvailableAppointments = () => {
+const AvailableAppointments = ({ date }) => {
     return (
         <div>
-            <h2> This is ok.</h2>
+            Available Appointments on {format(date, 'PP')}
         </div>
     );
 };
 
 export default AvailableAppointments;
+
+//formate ke niye nibo ar date ke niye nibo props hishabe,,,,
