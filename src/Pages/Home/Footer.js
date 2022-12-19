@@ -5,7 +5,9 @@ const Footer = () => {
     return (
         <section className='mt-2'
             style={{
-                background: `url(${footer})`
+                background: `url(${footer})`,
+                backgroundSize: 'cover'
+                //backgroundSize Cover
             }}>
 
             <footer class="footer p-10 mt-0  text-base-content">
@@ -20,7 +22,7 @@ const Footer = () => {
                     <div>
                         <p>All Rights Are Reserved<br />Providing By Esa Ruhullah TestMission</p>
                     </div>
-                    
+
                 </div>
 
 
