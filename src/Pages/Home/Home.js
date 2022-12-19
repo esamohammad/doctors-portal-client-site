@@ -6,7 +6,7 @@ import CareUnit from './CareUnit';
 import MakeAppointment from './MakeAppointment';
 import Testimonial from './Testimonial';
 import HomeContact from './HomeContact';
-import Footer from './Footer';
+import Footer from '../Shared/Footer';
 import CopyRight from './CopyRight';
 
 const Home = () => {
