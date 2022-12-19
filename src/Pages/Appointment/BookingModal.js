@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BookingModal = () => {
+const BookingModal = ({treatment}) => {
     return (
         <div>
 
