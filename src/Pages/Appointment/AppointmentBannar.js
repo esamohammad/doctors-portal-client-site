@@ -12,7 +12,7 @@ const AppointmentBannar = ({ date, setDate }) => {
                 background: `url(${bg})`,
                 backgroundSize: 'cover'
             }}>
-            <p className='text-blue-900 text-3xl '>You have Selected: </p>;
+            
             <div className="hero pt-1 ">
 
                 <div className="hero-content flex-col lg:flex-row-reverse ">

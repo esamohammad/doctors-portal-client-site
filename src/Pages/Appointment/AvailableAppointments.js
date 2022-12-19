@@ -4,7 +4,12 @@ import React from 'react';
 const AvailableAppointments = ({ date }) => {
     return (
         <div>
-            Available Appointments on {format(date, 'PP')}
+            <p className='text-blue-900 text-3xl '>Available Appointments on {format(date, 'PP')} </p>;
+
+
+
+
+            
         </div>
     );
 };
