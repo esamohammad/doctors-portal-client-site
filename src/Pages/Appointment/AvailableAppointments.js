@@ -15,17 +15,17 @@ const AvailableAppointments = ({ date }) => {
         <div>
             <p className='text-primary text-3xl '>Available Appointments on {format(date, 'PP')} </p>;
 
-            <div>
-                { 
-                
-                services.map(service=><Service
-                key = {service._id}
-                service={service}
-                ></Service>)
-                
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                {
+                    services.map(service => <Service
+                        key={service._id}
+                        service={service}
+                    ></Service>)
                 }
             </div>
 
+
+            {/* //This is all service ar container tai atar upor css hobe, */}
 
 
         </div>
