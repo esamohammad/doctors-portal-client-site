@@ -19,7 +19,7 @@ const Login = () => {
 
     return (
         <div className='flex h-screen justify-center items-center'>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-info shadow-2xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Login</h2>
 
@@ -80,21 +80,11 @@ const Login = () => {
                         </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-                        <input className='btn w-full max-w-xs' type="submit" />
+                        <input className='btn w-full max-w-xs' type="submit" value="Login" />
                     </form>
 
                     <div className="divider">OR</div>
+                    
                     <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline"
