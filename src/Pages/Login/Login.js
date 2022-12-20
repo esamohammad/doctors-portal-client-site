@@ -45,7 +45,13 @@ const Login = () => {
                             </label>
                             <input
                                 type="password" placeholder="Your Password" className="input input-bordered w-full max-w-xs"
-                                {...register("firstName", { required: true })}
+                                {...register("email", {
+                                    pattern: {
+                                        value: /[A-Za-z]{3}/,
+                                        message: 'error message'
+                                    }
+                                })}
+
                                 aria-invalid={errors.firstName ? "true" : "false"}
                             />
 
@@ -53,10 +59,6 @@ const Login = () => {
                                 <span className="label-text-alt">Forget Password?</span>
 
                             </label>
-
-
-
-
                         </div>
 
 
