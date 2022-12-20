@@ -12,8 +12,6 @@ const BookingModal = ({ date, treatment,setTreatment }) => {
 
     }
 
-
-
     return (
         <div>
 
