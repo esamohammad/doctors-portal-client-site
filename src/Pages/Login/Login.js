@@ -91,9 +91,7 @@ const Login = () => {
 
 
 
-                        <input
-                            type="submit"
-                        />
+                        <input className='btn' type="submit" />
                     </form>
 
                     <div className="divider">OR</div>
