@@ -22,7 +22,31 @@ const Login = () => {
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Login</h2>
+
                     <form onSubmit={handleSubmit(onSubmit)}>
+
+
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">What is your name?</span>
+
+                            </label>
+                            <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            <label className="label">
+
+
+                            </label>
+                        </div>
+
+
+
+
+
+
+
+
+
+
                         <input
                             {...register("firstName", { required: true })}
                             aria-invalid={errors.firstName ? "true" : "false"}
