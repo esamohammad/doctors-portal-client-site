@@ -28,14 +28,35 @@ const Login = () => {
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">What is your name?</span>
+                                <span className="label-text">Email</span>
 
                             </label>
-                            <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            <input
+                                type="email" placeholder="Your Email" className="input input-bordered w-full max-w-xs"
+                            />
                             <label className="label">
 
+                            </label>
+
+
+                            <label className="label">
+                                <span className="label-text">Password</span>
 
                             </label>
+                            <input
+                                type="password" placeholder="Your Password" className="input input-bordered w-full max-w-xs"
+                                {...register("firstName", { required: true })}
+                                aria-invalid={errors.firstName ? "true" : "false"}
+                            />
+
+                            <label className="label">
+                                <span className="label-text-alt">Forget Password?</span>
+
+                            </label>
+
+
+
+
                         </div>
 
 
@@ -48,8 +69,7 @@ const Login = () => {
 
 
                         <input
-                            {...register("firstName", { required: true })}
-                            aria-invalid={errors.firstName ? "true" : "false"}
+
                         />
                         {errors.firstName?.type === 'required' && <p role="alert">First name is required</p>}
 
