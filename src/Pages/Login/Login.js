@@ -31,3 +31,5 @@ const Login = () => {
 export default Login;
 
 //apatoto google sing in form ta niye aste parsi ok 
+
+//https://react-hook-form.com/get-started  install korlam
