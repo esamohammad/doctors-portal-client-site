@@ -25,26 +25,15 @@ const Login = () => {
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
-
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Email</span>
 
                             </label>
+
                             <input
                                 type="email" placeholder="Your Email" className="input input-bordered w-full max-w-xs"
-                            />
-                            <label className="label">
 
-                            </label>
-
-
-                            <label className="label">
-                                <span className="label-text">Password</span>
-
-                            </label>
-                            <input
-                                type="password" placeholder="Your Password" className="input input-bordered w-full max-w-xs"
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -56,13 +45,37 @@ const Login = () => {
                                         message: 'Provide a valid Email'
                                     }
                                 })}
-
-                                aria-invalid={errors.firstName ? "true" : "false"}
                             />
 
                             <label className="label">
-                                <span className="label-text-alt">Forget Password?</span>
+                                {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                                {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
+                            </label>
+                        </div>
 
+
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Password</span>
+                            </label>
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                className="input input-bordered w-full max-w-xs"
+                                {...register("password", {
+                                    required: {
+                                        value: true,
+                                        message: 'Password is Required'
+                                    },
+                                    minLength: {
+                                        value: 6,
+                                        message: 'Must be 6 characters or longer'
+                                    }
+                                })}
+                            />
+                            <label className="label">
+                                {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                                {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                             </label>
                         </div>
 
@@ -75,18 +88,12 @@ const Login = () => {
 
 
 
-                        <input
 
-                        />
-                        {errors.firstName?.type === 'required' && <p role="alert">First name is required</p>}
+
 
                         <input
-                            {...register("mail", { required: "Email Address is required" })}
-                            aria-invalid={errors.mail ? "true" : "false"}
+                            type="submit"
                         />
-                        {errors.mail && <p role="alert">{errors.mail?.message}</p>}
-
-                        <input type="submit" />
                     </form>
 
                     <div className="divider">OR</div>
@@ -95,8 +102,8 @@ const Login = () => {
                         className="btn btn-outline"
                     >Continue with Google</button>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
