@@ -46,9 +46,14 @@ const Login = () => {
                             <input
                                 type="password" placeholder="Your Password" className="input input-bordered w-full max-w-xs"
                                 {...register("email", {
+                                    required: {
+                                        value: true,
+                                        message: 'Email is Required'
+                                    },
+
                                     pattern: {
-                                        value: /[A-Za-z]{3}/,
-                                        message: 'error message'
+                                        value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
+                                        message: 'Provide a valid Email'
                                     }
                                 })}
 
