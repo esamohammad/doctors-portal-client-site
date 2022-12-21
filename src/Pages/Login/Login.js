@@ -22,7 +22,7 @@ const Login = () => {
 
 
 
-    if (loading || gLoading) {
+    if ( loading || gLoading) {
         return <Loading></Loading>
     }
 
