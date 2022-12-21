@@ -42,9 +42,12 @@ const SignUp = () => {
         console.log(gUser);
     }
 
-    const onSubmit = data => {
+    const onSubmit = async data => {
         console.log(data);
         createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName, photoURL });
+
+
     }
 
 
