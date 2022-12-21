@@ -56,6 +56,29 @@ const SignUp = () => {
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
+                                <span className="label-text">Your Name</span>
+
+                            </label>
+
+                            <input
+                                type="text" placeholder="Your Name" className="input input-bordered w-full max-w-xs"
+
+                                {...register("name", {
+                                    required: {
+                                        value: true,
+                                        message: 'Name is Required'
+                                    }
+                                })}
+                            />
+
+                            <label className="label">
+                                {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                
+                            </label>
+                        </div>
+
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
                                 <span className="label-text">Email</span>
 
                             </label>
@@ -109,7 +132,7 @@ const SignUp = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs' type="submit" value="Signup" />
+                        <input className='btn w-full max-w-xs' type="submit" value="Sign up" />
                     </form>
                     <p><small>Already have an account? <Link className='text-orange-600' to="/Login">Please Login</Link></small></p>
                     <div className="divider">OR</div>
