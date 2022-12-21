@@ -2,6 +2,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const BookingModal = ({ date, treatment, setTreatment }) => {
     const { _id, name, slots } = treatment;
@@ -37,7 +38,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                 setTreatment(null);
             })
 
-//ai fetch mane data booking diye sarvare pathano..
+        //ai fetch mane data booking diye sarvare pathano..
     }
 
     return (
