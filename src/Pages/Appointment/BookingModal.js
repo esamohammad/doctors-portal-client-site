@@ -12,7 +12,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
     const handleBooking = event => {
         event.preventDefault();
         const slot = event.target.slot.value;
-        // console.log(_id, name, slot);
+        console.log(_id, name, slot);
 
         const booking = {
             treatmentId: _id,
@@ -24,7 +24,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
             phone: event.target.phone.value
         }
 
-        fetch('http://localhost:5000/booking', {
+        fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
