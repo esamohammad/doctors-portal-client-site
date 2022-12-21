@@ -8,6 +8,7 @@ import Loading from '../Shared/Loding';
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm()
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -15,9 +16,22 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+
+    let signInError;
+
+
+
+
     if (loading || gLoading) {
         return <Loading></Loading>
     }
+
+    if (error || gError) {
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
+    }
+
+
+
 
     if (gUser) {
         console.log(gUser);
@@ -90,7 +104,7 @@ const Login = () => {
                             </label>
                         </div>
 
-
+                        {signInError}
                         <input className='btn w-full max-w-xs' type="submit" value="Login" />
                     </form>
 
