@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loding';
@@ -12,11 +12,11 @@ const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm()
 
     const [
-        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useSignInWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
 
 
     let signInError;
@@ -73,7 +73,7 @@ const SignUp = () => {
 
                             <label className="label">
                                 {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
-                                
+
                             </label>
                         </div>
 
