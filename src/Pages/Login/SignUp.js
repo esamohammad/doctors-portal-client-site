@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
@@ -7,7 +6,8 @@ import Loading from '../Shared/Loding';
 import { Link } from 'react-router-dom';
 
 
-const Login = () => {
+
+const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm()
 
@@ -44,11 +44,13 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password);
     }
 
+
+
     return (
         <div className='flex h-screen justify-center items-center'>
-            <div className="card w-96 bg-success shadow-2xl">
+            <div className="card w-96 bg-base-300 shadow-lg	">
                 <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold">Login</h2>
+                    <h2 className="text-center text-2xl font-bold">Sign Up</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -122,8 +124,4 @@ const Login = () => {
     );
 };
 
-export default Login;
-
-//apatoto google sing in form ta niye aste parsi ok
-
-//https://react-hook-form.com/get-started  install korlam
+export default SignUp;
