@@ -36,7 +36,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
                 setTreatment(null);
             })
 
-
+//ai fetch mane data booking diye sarvare pathano..
     }
 
     return (
