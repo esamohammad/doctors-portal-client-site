@@ -22,7 +22,7 @@ const SignUp = () => {
 
 
 
-    
+
 
 
     let signInError;
@@ -44,8 +44,9 @@ const SignUp = () => {
 
     const onSubmit = async data => {
         console.log(data);
-        createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName, photoURL });
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+        console.log('Updating Done')
 
 
     }
