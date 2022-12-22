@@ -14,6 +14,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashbord from './Pages/Dashbord.js/Dashboard';
 import Dashboard from './Pages/Dashbord.js/Dashboard';
+import MyAppointment from './Pages/Dashbord.js/MyAppointment';
+import MyReview from './Pages/Dashbord.js/MyReview';
 
 function App() {
   return (
@@ -36,7 +38,13 @@ function App() {
             <Dashboard />
           </RequireAuth>
 
-        } ></Route>
+        } >
+
+          <Route index element={<MyAppointment></MyAppointment>} />
+          <Route path="myreview" element={<MyReview></MyReview>} />
+{/* ***index routing */}
+        </Route>
+
         <Route path="Reviews" element={<Reviews />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Login" element={<Login />} />
@@ -48,3 +56,22 @@ function App() {
 }
 
 export default App;
+
+
+// {/* ***index routing */}
+// index
+/*
+Determines if the route is an index route. Index routes render into their parent's Outlet at their parent's URL (like a default child route).
+
+
+<Route path="/teams" element={<Teams />}>
+  <Route index element={<TeamsIndex />} />
+  <Route path=":teamId" element={<Team />} />
+</Route>
+
+These special routes can be confusing to understand at first, so we have a guide dedicated to them here: Index Route.
+
+
+
+https://reactrouter.com/en/main/route/route#index
+*/
