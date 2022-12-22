@@ -16,7 +16,7 @@ const AvailableAppointments = ({ date }) => {
     //         .then(data => setServices(data));
     // }, [formattedDate]);  R.Q
 
-    const { data: services, isLoading } = useQuery(['available', formattedDate], () =>
+    const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () =>
         fetch(`http://localhost:5000/available?date=${formattedDate}`)
             .then(res => res.json())
     )
@@ -48,6 +48,7 @@ const AvailableAppointments = ({ date }) => {
                 date={date}
                 treatment={treatment}
                 setTreatment={setTreatment}
+                refetch={refetch}
             ></BookingModal>}
             {/* jodi treatment peye thake tahole modal open hobe */}
 
