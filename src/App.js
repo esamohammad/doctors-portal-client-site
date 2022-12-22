@@ -16,6 +16,7 @@ import Dashbord from './Pages/Dashbord.js/Dashboard';
 import Dashboard from './Pages/Dashbord.js/Dashboard';
 import MyAppointment from './Pages/Dashbord.js/MyAppointment';
 import MyReview from './Pages/Dashbord.js/MyReview';
+import MyHistory from './Pages/Dashbord.js/MyHistory';
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
 
           <Route index element={<MyAppointment></MyAppointment>} />
           <Route path="review" element={<MyReview></MyReview>} />
-{/* ***index routing */}
+          <Route path="history" element={<MyHistory></MyHistory>} />
+          {/* ***index routing */}
         </Route>
 
         <Route path="Reviews" element={<Reviews />} />
