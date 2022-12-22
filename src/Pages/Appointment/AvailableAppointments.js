@@ -16,7 +16,7 @@ const AvailableAppointments = ({ date }) => {
     //         .then(data => setServices(data));
     // }, [formattedDate]);  R.Q
 
-    const { data: services, isLoading } = useQuery('available', () =>
+    const { data: services, isLoading } = useQuery(['available', formattedDate], () =>
         fetch(`http://localhost:5000/available?date=${formattedDate}`)
             .then(res => res.json())
     )
