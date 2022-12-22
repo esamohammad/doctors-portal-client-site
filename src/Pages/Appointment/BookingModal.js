@@ -34,7 +34,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
             .then(res => res.json())
             .then(data => {
                 // to close the modal
-                console.log(data);
+                // console.log(data);
                 if (data.success) {
                     toast.success(`Appointment is set, ${formattedDate} at ${slot}`, {
                         theme: "dark",
@@ -43,7 +43,7 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
 
                 }
                 else {
-                    toast.error(`Already have and appointment on ${data.booking.date} at ${data.booking.slot}`, {
+                    toast.error(`Already have and appointment on ${data.booking?.date} at ${data.booking?.slot}`, {
                         theme: "colored",
                         position: toast.POSITION.TOP_CENTER
                     })
