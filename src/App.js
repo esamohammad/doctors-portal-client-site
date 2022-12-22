@@ -36,7 +36,7 @@ function App() {
             <Dashboard />
           </RequireAuth>
 
-        } />
+        } ></Route>
         <Route path="Reviews" element={<Reviews />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Login" element={<Login />} />
