@@ -41,7 +41,7 @@ function App() {
         } >
 
           <Route index element={<MyAppointment></MyAppointment>} />
-          <Route path="myreview" element={<MyReview></MyReview>} />
+          <Route path="review" element={<MyReview></MyReview>} />
 {/* ***index routing */}
         </Route>
 
