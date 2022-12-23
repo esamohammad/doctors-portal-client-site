@@ -38,8 +38,9 @@ const SignUp = () => {
 
 
 
-    if (gUser) {
-        console.log(gUser);
+    if (user || gUser) {
+        navigate('/Appointment')
+
     }
 
     const onSubmit = async data => {
@@ -47,7 +48,7 @@ const SignUp = () => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
         console.log('Updating Done')
-        navigate('/Appointment')
+        // navigate('/Appointment')
 
     }
 
