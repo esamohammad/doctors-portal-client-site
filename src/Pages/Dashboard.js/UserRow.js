@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserRow = ({ user }) => {
-    const { email } = user;
+    const { email, role } = user;
     const makeAdmin = () => {
 
         fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -20,7 +20,7 @@ const UserRow = ({ user }) => {
             <th>1</th>
             <td>{email}</td>
             {/* email niye distucturing */}
-            <td><button onClick={makeAdmin} class="btn btn-xs" >Make Admin</button></td>
+            <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs" >Make Admin</button>}</td>
             <td><button class="btn btn-xs">Remove User</button></td>
             {/* Remove user ata amake korte hobe pore */}
         </tr>
