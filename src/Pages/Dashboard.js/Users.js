@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
+import UserRow from './UserRow';
 
 
 const Users = () => {
@@ -17,6 +18,7 @@ const Users = () => {
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* <!-- head --> */}
+
                     <thead>
                         <tr>
                             <th></th>
@@ -28,13 +30,12 @@ const Users = () => {
                     <tbody>
                         {/* <!-- row 1 --> */}
                         {/* atai repet korbo */}
-                        <tr>
-                            <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                        </tr>
 
+
+                        {
+
+                            users.map(user => <UserRow></UserRow>)
+                        }
                     </tbody>
                 </table>
             </div>
