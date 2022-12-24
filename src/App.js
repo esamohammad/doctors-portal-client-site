@@ -15,8 +15,8 @@ import Dashboard from './Pages/Dashboard.js/Dashboard';
 import MyAppointment from './Pages/Dashboard.js/MyAppointment';
 import MyReview from './Pages/Dashboard.js/MyReview';
 import MyHistory from './Pages/Dashboard.js/MyHistory';
-import MyUser from './Pages/Dashboard.js/Users';
 import Users from './Pages/Dashboard.js/Users';
+
 
 function App() {
   return (
