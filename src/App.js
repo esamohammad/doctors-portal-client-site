@@ -15,7 +15,8 @@ import Dashboard from './Pages/Dashboard.js/Dashboard';
 import MyAppointment from './Pages/Dashboard.js/MyAppointment';
 import MyReview from './Pages/Dashboard.js/MyReview';
 import MyHistory from './Pages/Dashboard.js/MyHistory';
-import MyUser from './Pages/Dashboard.js/MyUser';
+import MyUser from './Pages/Dashboard.js/Users';
+import Users from './Pages/Dashboard.js/Users';
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
           <Route index element={<MyAppointment></MyAppointment>} />
           <Route path="review" element={<MyReview></MyReview>} />
           <Route path="history" element={<MyHistory></MyHistory>} />
-          <Route path="user" element={<MyUser></MyUser>} />
+          <Route path="user" element={<Users></Users>} />
           {/* ***index routing */}
         </Route>
 
