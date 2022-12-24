@@ -6,7 +6,7 @@ import UserRow from './UserRow';
 
 const Users = () => {
     //react quary
-    const { data: users, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
+    const { data: users, isLoading,refetch} = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
 
     //(is loding , loding sommossa)
     if (isLoading) {
@@ -32,9 +32,14 @@ const Users = () => {
                         {/* atai repet korbo */}
 
 
-                        {
+                        {//1. pothome component ani
+                        //2.ar por map kori
 
-                            users.map(user => <UserRow></UserRow>)
+                            users.map(user => <UserRow
+                            key={user._id}
+                            user={user}
+                            refetch={refetch}
+                            ></UserRow>)
                         }
                     </tbody>
                 </table>
