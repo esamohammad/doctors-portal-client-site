@@ -88,7 +88,24 @@ const AddDoctor = () => {
                     </select>
 
                 </div>
-
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Photo</span>
+                    </label>
+                    <input
+                        type="file"
+                        className="input input-bordered w-full max-w-xs"
+                        {...register("image", {
+                            required: {
+                                value: true,
+                                message: 'Image is Required'
+                            }
+                        })}
+                    />
+                    <label className="label">
+                        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                    </label>
+                </div>
 
                 <input className='btn w-full max-w-xs' type="submit" value="ADD" />
             </form></div>
