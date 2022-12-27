@@ -8,8 +8,33 @@ const AddDoctor = () => {
 
     const { data: services, isLoading } = useQuery('services', () => fetch('http://localhost:5000/service').then(res => res.json()))
 
+    //imgbb
+    const imageStorageKey = '67d076b042237640f7479dd3d12f408a';
+
+    /**
+         * 3 ways to store images
+         * 1. Third party storage //Free open public storage is ok for Practice project 
+         * 2. Your own storage in your own server (file system)
+         * 3. Database: Mongodb 
+         * 
+         * YUP: to validate file: Search: Yup file validation for react hook form
+        */
+
+
     const onSubmit = async data => {
-        console.log('data', data);
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log('imgbb', result)
+
+            })
     }
 
     if (isLoading) {
