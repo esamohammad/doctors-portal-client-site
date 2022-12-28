@@ -22,8 +22,8 @@ const ManageDoctors = () => {
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Avatar</th>
+                            <th>Sl.</th>
+                            <th>Photo</th>
                             <th>Name</th>
                             <th>Specialty</th>
                             <th>Action</th>
