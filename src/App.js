@@ -18,6 +18,7 @@ import MyHistory from './Pages/Dashboard.js/MyHistory';
 import Users from './Pages/Dashboard.js/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddDoctor from './Pages/Dashboard.js/AddDoctor';
+import ManageDoctors from './Pages/Dashboard.js/ManageDoctors';
 
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
           <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>} />
 
           <Route path="doctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>} />
+
+          <Route path="manageDoctors" element={<RequireAdmin><ManageDoctors></ManageDoctors></RequireAdmin>} />
           {/* ***index routing */}
         </Route>
 

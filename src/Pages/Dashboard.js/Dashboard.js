@@ -29,6 +29,9 @@ const Dashboard = () => {
 
                         <li className='text-error-content'><Link to="/dashboard/doctor">Add A Doctor</Link>
                         </li>
+                        
+                        <li className='text-error-content'><Link to="/dashboard/manageDoctors">Manage  Doctors</Link>
+                        </li>
                     </>}
                 </ul>
 
